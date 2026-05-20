@@ -1,0 +1,77 @@
+body {
+  margin: 0px;
+}
+
+#game_grid {
+  border: 2px tomato solid;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 33.3%;
+  position: relative;
+  transition: transform 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+img {
+  width: 100%;
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+/* buttons */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+  background: #ff4b4b;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff2d2d;
+}
+
+#start {
+  background: #28a745;
+}
+#start:hover {
+  background: #1f8a38;
+}
+
+#restart {
+  background: #007bff;
+}
+#restart:hover {
+  background: #0062cc;
+}
+
+#theme {
+  background: #6f42c1;
+}
+#theme:hover {
+  background: #59359c;
+}
